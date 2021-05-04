@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 # 특정 종목에 대한 가격, 거래량, 수익률을 확인할 수 있는 함수
-# 기간 입력, 관심 TICKER를 입력합니다.
-# 1차로 가격, 거래량 등 Indicator를 설정하여 가격, 거래량 data를 호출합니다.
-# 2차로 가격, 거래량 data 등 data값을 이용하여 Graph를 산출합니다.
+# 대상 기간과 관심 TICKER를 입력합니다.
+# 가격, 거래량 등 Indicator를 설정하여 가격, 거래량 data를 호출합니다. (1차)
+# 가격, 거래량 data를 이용하여 Graph를 산출합니다. (2차)
 
 import dash
 from dash.dependencies import Input, Output
@@ -17,18 +17,7 @@ import datetime
 start = datetime.datetime(2020, 1, 1)
 end = datetime.datetime.now()
 
-
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-# df = []
-# for i in range(0,len(TICKER)-1):
-#     dfs = web.DataReader(TICKER, 'yahoo', start, end)
-#     dfs.reset_index(inplace=True)
-#     dfs.set_index("Date", inplace=True)
-#     dfs['Return'] = (dfs['Close'] / dfs['Close'].shift(1)) - 1
-#     dfs['Return(cum)'] = (1 + dfs['Return']).cumprod()
-#     dfs.loc[:,'TICKER'] = TICKER[i]
-#     df.append(pd.DataFrame(dfs))
 
 # 관심 TICKER 데이터를 생성합니다.
 TICKER = 'AAPL'

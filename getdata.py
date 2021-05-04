@@ -1,5 +1,5 @@
-# TICKER별 가격, 거래량 가져오는 함수
-# 수익률, 누적 수익률 산출
+# TICKER별 가격, 거래량 가져오는 함수입니다.
+# 수익률, 누적 수익률 산출합니다.
 
 import datetime
 import pandas_datareader.data as web
